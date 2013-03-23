@@ -205,7 +205,6 @@ class System(object):
             if os.path.exists(temp_dir): # Delete temp if it exits
                 shutil.rmtree(temp_dir)
             temp_dir = self.build_path(temp_dir)
-            print str(os.path.join(self.get_cache_path(), file_name))
 	    tar_file = tarfile.open(str(os.path.join(self.get_cache_path(), file_name)))		    
             tar_file.__class__ = snoing_tarfile.TarFile
             tar_file.extractall(temp_dir)
